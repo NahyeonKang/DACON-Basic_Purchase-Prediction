@@ -20,7 +20,6 @@ for i in range(len(data_train_T)):
         
 train["Range"] = target
 ```
-
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f36a8616-8ca9-4016-bc01-9d64888fff2c/Untitled.png)
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9db54987-7ddc-48bb-b1e0-4f22d28ea5be/Untitled.png)
