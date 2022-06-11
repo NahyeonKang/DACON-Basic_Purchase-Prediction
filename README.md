@@ -21,7 +21,7 @@ for i in range(len(data_train_T)):
 train["Range"] = target
 ```
 <img width="535" alt="image" src="https://user-images.githubusercontent.com/24906028/173172880-c28b3d9a-2431-4cd3-bd27-e5f581c4884e.png">
-![image](https://user-images.githubusercontent.com/24906028/173172895-88842093-5ae3-45a4-8ca8-0479ccee0f4b.png)
+![image](https://user-images.githubusercontent.com/24906028/173172927-80db3a25-79c3-4522-8961-9ac6a77d8645.png)
 
 Marital_Status에서 'Alone', 'YOLO', 'Absurd'는 데이터가 극히 작고 Single에 범주에 포함되므로 single로 통합
 
@@ -41,21 +41,20 @@ Education 중 빈도가 가장 낮은 Basic은 2n Cycle와 합쳐서 새로운 �
 연령대별 `target`의 분포를 살펴보면, 80대를 제외한 연령대는 0 가까이에 치우친 분포를 보입니다. 80대의 경우, 평균이 1000인 normal distribution과 비슷한 형태
 80대처럼 연령대가 `target`값을 구분하는 키가 될 수 있으므로, 연령대를 학습 모델의 feature로 추가
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3634bf21-d3c4-4b99-9d43-3dc441847fbd/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173172940-da3a2487-b841-47d7-b118-2a1ea84cf50a.png)
 
 자녀수가 1명~2명인 경우, `target`값이 0에 몰리는 비슷한 분포. 이에 비해 자녀 없음(0)은 `target`이 0부터 1,500 사이에 고르게 분포
 
 청소년수`Teenhome`는 모든 케이스(0,1,2)가 0 가까이에 모이는 분포
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b3e7026-1cf8-4332-8834-7e77658685b4/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173172960-8a3075ad-9341-4a77-a141-dca6c6228ce5.png)
 
 binary 타입으로 변환했을 때 자녀수`Kidhome`은 자녀있음(1)과 자녀없음(0)의 `target` 분포 형태에 크게 차이가 있음
 
 청소년수`Teenhome`은 청소년있음(1)과 청소년없음(0) 모두 0에 쏠리는 분포
 
 청소년없음(0)에서 `target`값이 1000 이상인 구간의 밀도가 비교적 높게 나타나는 것이 특징
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8b85589-a071-4546-bfd6-0775a74cf1c7/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173172995-35fce121-326c-48ae-9fb5-1eb14fa74cdc.png)
 
 `TotalCmp`값에 따라 `target`의 분포가 달라질 수 있음 → 피쳐 추가
 
