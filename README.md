@@ -21,7 +21,8 @@ for i in range(len(data_train_T)):
 train["Range"] = target
 ```
 <img width="535" alt="image" src="https://user-images.githubusercontent.com/24906028/173172880-c28b3d9a-2431-4cd3-bd27-e5f581c4884e.png">
-![image](https://user-images.githubusercontent.com/24906028/173172927-80db3a25-79c3-4522-8961-9ac6a77d8645.png)
+
+
 
 Marital_Status에서 'Alone', 'YOLO', 'Absurd'는 데이터가 극히 작고 Single에 범주에 포함되므로 single로 통합
 
@@ -58,7 +59,7 @@ binary 타입으로 변환했을 때 자녀수`Kidhome`은 자녀있음(1)과 �
 
 `TotalCmp`값에 따라 `target`의 분포가 달라질 수 있음 → 피쳐 추가
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b00193db-70b1-4d6a-a6f7-797b1537a6ef/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173173016-fa5bc115-ecb5-4a33-abc6-4e9caf07094a.png)
 
 총 구매 횟수`TotalPurchases`가 커질수록 `target`값도 증가하는 추세 → 피쳐 추가
 
@@ -68,7 +69,7 @@ Pandas profiling High Correlation
 
 `NumDealsPurchases`-`Teenhome`
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10bd4f0b-dd66-4765-b1b3-d4cea0a8b9df/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173173037-00dd67c2-e2a9-47f4-9c01-ef5d6191eb70.png)
 
 상관관계 낮은 Recency, AcceptedCmp2, AcceptedCmp3, AcceptedCmp4 피쳐 drop
 
@@ -284,14 +285,14 @@ print("Total Average NMAE %0.4f" %(total_score)) #최종 average score 출력
 400이하의 값 중 100 이하에 분포가 집중됨 
 → `target`값이 100 이하인 케이스와 `target`값이 400 이하인 케이스, `target`값이 400 이상인 케이스로 나누어 학습하면 어떨까
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4edcc9c-03ef-4ea4-9c22-c1436819c755/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173173052-04420bb6-47b1-4bde-9523-333eee81cca6.png)
     
 - 마지막 캠페인을 포함하여 총 6번의 캠페인 중 제안을 수락한 횟수는 0부터 최대 5회까지 발생
 6번의 캠페인 제안 중 어느 하나도 수락하지 않은 0이 가장 높은 비중을 차지
 다음으로 캠페인 제안을 1번 수락한 케이스가 높은 비중을 차지하지만, `TotalCmp` 값이 0인 케이스의 약 25%에 불과
 → `TotalCmp` 변수도 어떠한 캠페인 제안도 수락하지 않음(0)과 하나 이상의 제안에 수락함(1)을 나타내는 binary 타입의 변수 추가해볼걸
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f8abbac-31bf-4b17-a7cd-a4303c9784c3/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173173056-f59e689a-16d3-46f5-8cfa-aaf66317842d.png)
     
 - Basic은 다른 학력에 비해 `target`의 분포가 0에 집중된 형태. 데이터 수가 가장 적었던 클래스인만큼 분포도 더 극단적인 형태를 띈 것이 아닐까.
 - Basic을 제외한 4가지 학력 기준의 `target`의 분포는 연령대별 `target`분포와 비슷한 형태. → Basic을 합치지 말고 drop?
