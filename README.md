@@ -20,11 +20,8 @@ for i in range(len(data_train_T)):
         
 train["Range"] = target
 ```
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f36a8616-8ca9-4016-bc01-9d64888fff2c/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9db54987-7ddc-48bb-b1e0-4f22d28ea5be/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac044c3b-44cf-4eca-8a6f-03c9cff4f735/Untitled.png)
+<img width="535" alt="image" src="https://user-images.githubusercontent.com/24906028/173172880-c28b3d9a-2431-4cd3-bd27-e5f581c4884e.png">
+![image](https://user-images.githubusercontent.com/24906028/173172895-88842093-5ae3-45a4-8ca8-0479ccee0f4b.png)
 
 Marital_Status에서 'Alone', 'YOLO', 'Absurd'는 데이터가 극히 작고 Single에 범주에 포함되므로 single로 통합
 
@@ -33,13 +30,12 @@ Kidhome와 Teenhome에서 자녀 및 청소년을 2명둔 사람은 소수 → K
 Education 중 빈도가 가장 낮은 Basic은 2n Cycle와 합쳐서 새로운 카테고리로
 
 소득은 주로 25,000~75,000 사이에 분포하며, 150,000 이상의 값을 이상치로서 제거할 수 있으나 이상치와 target의 상관관계가 유의미하다고 판단하여 제거하지 않음
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b2fbc67-2aca-4b49-ac43-6007991e95fe/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173172909-ee8d895f-a9e5-44ae-9807-84cc1cb0a4b9.png)
 
 매장, 웹사이트, 카탈로그 구매 수의 총합을 `total`로 나타내고, 각 구매 경로별 비율(0~1 사이)로 나타냈습니다.구매 경로는 매장 구매의 비중이 가장 높은 편이며, 다음으로 웹사이트, 카탈로그 순으로 나타납니다.
 총 구매 횟수가 낮을수록 카탈로그의 비중이 0.2 이하로 매우 낮은 편. 총 구매 횟수가 높아질수록 구매경로별 비중의 차이가 좁혀짐 → 카탈로그 비중 피쳐 추가
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f79e839c-8d20-43db-b023-c2b2da6d385a/Untitled.png)
+![image](https://user-images.githubusercontent.com/24906028/173172918-be033046-d70f-4c8f-a28a-c6f570baa29a.png)
 
 평균 `target`값은 연령대가 높을수록 증가하는 추세
 연령대별 `target`의 분포를 살펴보면, 80대를 제외한 연령대는 0 가까이에 치우친 분포를 보입니다. 80대의 경우, 평균이 1000인 normal distribution과 비슷한 형태
