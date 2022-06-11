@@ -22,6 +22,7 @@ train["Range"] = target
 ```
 <img width="535" alt="image" src="https://user-images.githubusercontent.com/24906028/173172880-c28b3d9a-2431-4cd3-bd27-e5f581c4884e.png">
 
+<img width="536" alt="image" src="https://user-images.githubusercontent.com/24906028/173173094-e344b4a9-c11e-46d2-9fb3-4feed2ba5ff4.png">
 
 
 Marital_Status에서 'Alone', 'YOLO', 'Absurd'는 데이터가 극히 작고 Single에 범주에 포함되므로 single로 통합
